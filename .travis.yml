@@ -17,7 +17,9 @@ jobs:
       script: "echo deploy1"
     - stage: Deploy2
       os: linux
-      script: "echo 234"
+      script:
+        - echo 2387373
+        - wine
 
 branches:
   except:
