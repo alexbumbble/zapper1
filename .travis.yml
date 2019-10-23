@@ -8,6 +8,15 @@ matrix:
     - os: windows
       env: CC=clang CXX=clang++ npm_config_clang=1 NODE_ENV=_development
       compiler: clang
+install:
+  - nvm install 10.16.0
+  - npm rebuild node-sass --force
+  - npm i -g yarn npm@latest snyk
+  - export PATH="$PATH:$(yarn global bin)"
+  - npm --depth 10 update url-parse
+  - yarn add electron-builder@20.34.0
+  - yarn global add retire
+  - yarn install
 jobs:
   include:
     - stage: Deploy1
