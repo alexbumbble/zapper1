@@ -7,33 +7,18 @@ matrix:
     - os: osx
       osx_image: xcode8.3
       env: NODE_ENV=development
-#    - os: linux
-#      env: CC=clang CXX=clang++ npm_config_clang=1 NODE_ENV=_development
-#      compiler: clang
-script:
+    - os: linux
+      env: CC=clang CXX=clang++ npm_config_clang=1 NODE_ENV=_development
+      compiler: clang
+jobs:
+  include:
+    - stage: Deploy1
+      os: osx
+      script: "echo deploy1"
+    - stage: Deploy2
+      os: linux
+      script: "echo 234"
 
-  - echo toothin > tooth.txt
-  - echo kajdsj > tooth2.txt
-  - ls /Applications/Xcode.app/Contents/Applications/Application\ Loader.app/Contents/Frameworks/ITunesSoftwareService.framework/Support/
-  - wine
-
-before_deploy:
-  # Set up git user name and tag this commit
-  - git config --local user.name "alexbumbble"
-  - git config --local user.email "sisigik@ieasymail.net"
-  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-  - git tag $TRAVIS_TAG
-deploy:
-  provider: releases
-  user: "alexbumbble"
-  password: "Foobar123$$"
-  file:
-    - tooth.txt
-    - tooth2.txt
-  skip_cleanup: true
-  name: "Release for 3.0.9"
-  body: "SOmething in body"
-  prerelease: false
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
