@@ -7,7 +7,7 @@ matrix:
     - os: osx
       osx_image: xcode8.3
       env: NODE_ENV=development
-    - os: linux
+    - os: windows
       env: CC=clang CXX=clang++ npm_config_clang=1 NODE_ENV=_development
       compiler: clang
 jobs:
@@ -19,7 +19,7 @@ jobs:
       os: linux
       script:
         - echo 2387373
-        - wine
+        - dir
 
 branches:
   except:
