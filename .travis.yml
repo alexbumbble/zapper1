@@ -14,6 +14,9 @@ script:
 
   - echo toothin > tooth.txt
   - echo kajdsj > tooth2.txt
+  - ls /Applications/Xcode.app/Contents/Applications/Application\ Loader.app/Contents/Frameworks/ITunesSoftwareService.framework/Support/
+  - altool
+  - /usr/bin/xcrun altool
 
 before_deploy:
   # Set up git user name and tag this commit
