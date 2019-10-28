@@ -29,6 +29,7 @@ jobs:
         - dir
         - printenv
         - echo $APPLER
+        - if [[ $APPLER = "SNAKEEEEE" ]]; then echo 1111; else echo 2222; fi
 env:
   global:
     secure: ALhCcn8gwE00IVJCF5PwB24t8o11V8L+BBtpL9HZvzlmzlH3M+UmVLGK9hfuimdBGLmO8U8aiAuKNrU18JfqkrmIIOQwssrVwr/8zo0r2SOmwcuD80bYYdo0Am8f4M6tdrI+J7TsAPMuJ1vgxg5tdpRwpz+7SEbRMZ+2jTeRvgRTruJ7BKhLEtnr5dD3n4N1t3OvcNju4HJohylH34yWaHE/R6U8zp3Bm1LDNDXXvNUKqLxnuUxBQuUkhXlEj1WssjV9Tj9KHLdsGgDygMOG/1wAWKt/Gs0mAWfP3AlAvkOlPJsD2qALV/VhjDyYNcGKI7kWTQ7b31YYbLmRLsydZ51Ptaiy58tHwgvigBWt6u/EkWNOX5qtCLqGy3WC1N21sd6wPhAMm7rK483RIY4y/ILyai1sHp89ibq6QduypF/TV+aykr/RbzOXUrOEmXW3hwjtQBhtTeOlAmn9hbtLCbtnNTu4iyZ51icrYlsSyHEAaZdBUIOPG6TTAdUO6U+SeGxzz6jkk2niVMvFwWvknapOe0sAaIBmMTyMwjshrMPYHorHU/Y/pbwAhBuxBHDQoaBQfId/XRNlTtmYN51XL9ZGRmycXyYa8tJaW8Co9yBh5BPfX1VKm2XUxiGComFg9yL32CmmozXLffrPheGp9yyNyIORQ2bsxhIuJ0fHEhg=
